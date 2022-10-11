@@ -1,5 +1,5 @@
 ﻿  dezimals.cpp
-D:\Progaramming\C++\dezimals\dezimals\dezimals.cpp(11,4): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\Progaramming\C++\dezimals\dezimals\dezimals.cpp(29,14): warning C4244: 'argument': conversion from 'double' to 'std::streamsize', possible loss of data
-D:\Progaramming\C++\dezimals\dezimals\dezimals.cpp(35,14): warning C4244: 'argument': conversion from 'double' to 'std::streamsize', possible loss of data
+D:\Progaramming\C++\dezimals\dezimals\dezimals.cpp(12,4): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Progaramming\C++\dezimals\dezimals\dezimals.cpp(31,14): warning C4244: 'argument': conversion from 'double' to 'std::streamsize', possible loss of data
+D:\Progaramming\C++\dezimals\dezimals\dezimals.cpp(37,14): warning C4244: 'argument': conversion from 'double' to 'std::streamsize', possible loss of data
   dezimals.vcxproj -> D:\Progaramming\C++\dezimals\x64\Debug\dezimals.exe

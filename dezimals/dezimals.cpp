@@ -1,23 +1,25 @@
 #include <iostream>
+#include <string>
 using std::string;
 using std::cout;
 using std::cin;
 
-bool findSequence(const string fraction, string $sequence) {
-	if (fraction.length() >= 2) {
-		for (int i = 0; i < fraction.length() / 2; i++)
+bool findSequence(const string fraction, string &sequence) {
+	if (fraction.length() >= 4) {
+		for (int i = 0; i < fraction.length(); i++)
 		{
 			string currentSeq = "";
-			for (int j = fraction.length() - 1; j > fraction.length() - i - 1; j--)
+			for (int j = fraction.length() / 2 + i; j < fraction.length(); j++)
 			{
 				currentSeq += fraction[j];
 			}
-			$sequence = currentSeq;
+			sequence = currentSeq;
 		}
+		return false;
 	}
 	return false;
-}
-
+}// 2 3 2 5 
+//3 5 5 4 7 8 9 9 
 int main()
 {
 	int counter = 0, denominator = 1, currentRest = 0;
@@ -37,11 +39,16 @@ int main()
 	integerOfFraction = "" + (counter / denominator);
 	currentRest = counter % denominator;
 	int currentInteration = 0;
-	while (!findSequence(result, sequence) && currentInteration <= 500) {
+	for (int i = 0; i < 501 && !findSequence(result, sequence); i++)
+	{
 		currentRest *= 10;
-		result += currentRest / denominator;//fuck
+		result += std::to_string(currentRest / denominator);
 		currentRest %= denominator;
 		currentInteration++;
 		sequence = "";
 	}
+	if (sequence == "2173913043478260869565") {
+		cout << true;
+	}
 }
+//"0.(2173913043478260869565)"
